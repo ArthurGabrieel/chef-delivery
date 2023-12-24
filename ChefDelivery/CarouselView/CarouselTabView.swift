@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CarouselTabView: View {
+    @State private var currentIndex = 1
     
     let ordersMock: [OrderType] = [
         OrderType(id: 1, name: "banner burger", image: "barbecue-banner"),
@@ -16,13 +17,24 @@ struct CarouselTabView: View {
     ]
     
     var body: some View {
-        TabView {
+        TabView(selection: $currentIndex) {
             ForEach(ordersMock) { order in
                 CarouselItemView(order: order)
+                    .tag(order.id)
             }
         }
         .frame(height: 180)
-        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+        .tabViewStyle(.page(indexDisplayMode: .always))
+        .onAppear {
+            Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { _ in
+                withAnimation(.easeInOut) {
+                    if currentIndex > ordersMock.count {
+                        currentIndex = 1
+                    }
+                    currentIndex += 1
+                }
+            }
+        }
     }
 }
 

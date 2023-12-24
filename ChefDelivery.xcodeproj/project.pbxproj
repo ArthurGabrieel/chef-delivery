@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8ED2FDCE2B38832E0035C9E9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2FDCD2B38832E0035C9E9 /* HomeView.swift */; };
 		8EE76A8C2B373223009E1FEB /* ChefDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE76A8B2B373223009E1FEB /* ChefDeliveryApp.swift */; };
 		8EE76A8E2B373223009E1FEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE76A8D2B373223009E1FEB /* ContentView.swift */; };
 		8EE76A902B373225009E1FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EE76A8F2B373225009E1FEB /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8ED2FDCD2B38832E0035C9E9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8EE76A882B373223009E1FEB /* ChefDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChefDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE76A8B2B373223009E1FEB /* ChefDeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefDeliveryApp.swift; sourceTree = "<group>"; };
 		8EE76A8D2B373223009E1FEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8ED2FDCC2B38831D0035C9E9 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				8ED2FDCD2B38832E0035C9E9 /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 		8EE76A7F2B373223009E1FEB = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +99,7 @@
 		8EE76A8A2B373223009E1FEB /* ChefDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				8ED2FDCC2B38831D0035C9E9 /* HomeView */,
 				8EE76A9A2B373435009E1FEB /* App */,
 				8EE76AA02B373BAF009E1FEB /* Model */,
 				8EE76A992B373423009E1FEB /* NavigationBar */,
@@ -271,6 +282,7 @@
 				8EE76ABD2B37A32C009E1FEB /* ProductDetailView.swift in Sources */,
 				8EE76AB72B378D69009E1FEB /* ProductType.swift in Sources */,
 				8EE76AAA2B3759B8009E1FEB /* CarouselItemView.swift in Sources */,
+				8ED2FDCE2B38832E0035C9E9 /* HomeView.swift in Sources */,
 				8EE76A8E2B373223009E1FEB /* ContentView.swift in Sources */,
 				8EE76AC92B37C2E4009E1FEB /* ProductDetailQuantityView.swift in Sources */,
 				8EE76ABA2B379523009E1FEB /* Double+.swift in Sources */,
