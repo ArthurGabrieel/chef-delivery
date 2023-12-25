@@ -8,22 +8,45 @@
 import SwiftUI
 
 struct ContentView: View {
-    let screenSize = UIScreen.main.bounds
+    @State private var stores: [StoreType] = []
+    @State var isLoading = true
+    
+    private let service = StoreService()
+    private let screenSize = UIScreen.main.bounds
     
     var body: some View {
         NavigationView {
             VStack {
-                NavigationBar()
-                    .padding(.horizontal, 15)
-                ScrollView(.vertical, showsIndicators: false) {
-                    VStack(spacing: 20) {
-                        OrderTypeGridView()
-                        CarouselTabView()
-                        StoresContainerView()
-                            .frame(width: screenSize.width)
+                if isLoading {
+                    ProgressView()
+                } else {
+                    NavigationBar()
+                        .padding(.horizontal, 15)
+                    ScrollView(.vertical, showsIndicators: false) {
+                        VStack(spacing: 20) {
+                            OrderTypeGridView()
+                            CarouselTabView()
+                            StoresContainerView(stores: stores)
+                                .frame(width: screenSize.width)
+                        }
                     }
                 }
             }
+        }
+        .onAppear {
+            getStores()
+        }
+    }
+    
+    func getStores() {
+        service.fetchData { stores, error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            else if let stores = stores {
+                self.stores = stores
+            }
+            isLoading = false
         }
     }
 }

@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E7C42E12B39D1DA00C873A6 /* StoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C42E02B39D1DA00C873A6 /* StoreService.swift */; };
+		8E7C42E42B39F7F800C873A6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8E7C42E32B39F7F800C873A6 /* Alamofire */; };
 		8ED2FDCE2B38832E0035C9E9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2FDCD2B38832E0035C9E9 /* HomeView.swift */; };
+		8ED2FDD02B38BEA70035C9E9 /* SlideButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2FDCF2B38BEA70035C9E9 /* SlideButtonView.swift */; };
 		8EE76A8C2B373223009E1FEB /* ChefDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE76A8B2B373223009E1FEB /* ChefDeliveryApp.swift */; };
 		8EE76A8E2B373223009E1FEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE76A8D2B373223009E1FEB /* ContentView.swift */; };
 		8EE76A902B373225009E1FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EE76A8F2B373225009E1FEB /* Assets.xcassets */; };
@@ -34,7 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E7C42E02B39D1DA00C873A6 /* StoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreService.swift; sourceTree = "<group>"; };
 		8ED2FDCD2B38832E0035C9E9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8ED2FDCF2B38BEA70035C9E9 /* SlideButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideButtonView.swift; sourceTree = "<group>"; };
 		8EE76A882B373223009E1FEB /* ChefDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChefDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE76A8B2B373223009E1FEB /* ChefDeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefDeliveryApp.swift; sourceTree = "<group>"; };
 		8EE76A8D2B373223009E1FEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,16 +71,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E7C42E42B39F7F800C873A6 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E7C42DF2B39D1CB00C873A6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8E7C42E02B39D1DA00C873A6 /* StoreService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		8ED2FDCC2B38831D0035C9E9 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
 				8ED2FDCD2B38832E0035C9E9 /* HomeView.swift */,
+				8ED2FDCF2B38BEA70035C9E9 /* SlideButtonView.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -102,6 +117,7 @@
 				8ED2FDCC2B38831D0035C9E9 /* HomeView */,
 				8EE76A9A2B373435009E1FEB /* App */,
 				8EE76AA02B373BAF009E1FEB /* Model */,
+				8E7C42DF2B39D1CB00C873A6 /* Network */,
 				8EE76A992B373423009E1FEB /* NavigationBar */,
 				8EE76A9D2B373875009E1FEB /* GridView */,
 				8EE76AA82B37597B009E1FEB /* CarouselView */,
@@ -223,6 +239,9 @@
 			dependencies = (
 			);
 			name = ChefDelivery;
+			packageProductDependencies = (
+				8E7C42E32B39F7F800C873A6 /* Alamofire */,
+			);
 			productName = ChefDelivery;
 			productReference = 8EE76A882B373223009E1FEB /* ChefDelivery.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +270,9 @@
 				Base,
 			);
 			mainGroup = 8EE76A7F2B373223009E1FEB;
+			packageReferences = (
+				8E7C42E22B39F7F800C873A6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 8EE76A892B373223009E1FEB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -290,9 +312,11 @@
 				8EE76AB12B378096009E1FEB /* StoresContainerView.swift in Sources */,
 				8EE76AA72B3752F9009E1FEB /* OrderTypeView.swift in Sources */,
 				8EE76AAF2B377EF6009E1FEB /* StoreItemView.swift in Sources */,
+				8ED2FDD02B38BEA70035C9E9 /* SlideButtonView.swift in Sources */,
 				8EE76AB32B378990009E1FEB /* StoreDetailView.swift in Sources */,
 				8EE76A9F2B3738A0009E1FEB /* OrderTypeGridView.swift in Sources */,
 				8EE76A8C2B373223009E1FEB /* ChefDeliveryApp.swift in Sources */,
+				8E7C42E12B39D1DA00C873A6 /* StoreService.swift in Sources */,
 				8EE76A9C2B373462009E1FEB /* NavigationBar.swift in Sources */,
 				8EE76AB52B378D1C009E1FEB /* StoreType.swift in Sources */,
 				8EE76AC32B37BE15009E1FEB /* StoreDetailProductsView.swift in Sources */,
@@ -504,6 +528,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E7C42E22B39F7F800C873A6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E7C42E32B39F7F800C873A6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E7C42E22B39F7F800C873A6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8EE76A802B373223009E1FEB /* Project object */;
 }
